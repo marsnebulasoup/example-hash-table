@@ -158,7 +158,14 @@ void LinkedList::printListReverse(Node *current)
 
 void LinkedList::printList(bool reverse)
 {
-  reverse ? printListReverse(head) : printListForwards(head);
+  if (head)
+  {
+    reverse ? printListReverse(head) : printListForwards(head);
+  }
+  else
+  {
+    cout << "EMPTY" << endl;
+  }
 }
 
 int LinkedList::getCount()
