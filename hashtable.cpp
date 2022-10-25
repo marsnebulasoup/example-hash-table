@@ -8,6 +8,7 @@ A example implementation of a hash table.
 
 HashTable::HashTable()
 {
+  count = 0;
 }
 
 HashTable::~HashTable()
@@ -25,6 +26,7 @@ bool HashTable::insertEntry(int id, string *data)
   if (id > 0 && data && data->length() > 0)
   {
     wasInserted = table[hash(id)].addNode(id, data);
+    count += wasInserted;
   }
   return wasInserted;
 }
@@ -35,6 +37,7 @@ bool HashTable::removeEntry(int id)
   if (id > 0)
   {
     wasRemoved = table[hash(id)].deleteNode(id);
+    count -= wasRemoved;
   }
   return wasRemoved;
 }
@@ -51,7 +54,7 @@ bool HashTable::getData(int id, Data *to)
 
 int HashTable::getCount()
 {
-  return 0;
+  return count;
 }
 
 void HashTable::printTable()
