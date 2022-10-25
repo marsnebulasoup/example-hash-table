@@ -14,9 +14,9 @@ HashTable::~HashTable()
 {
 }
 
-int hash(int)
+int hash(int id)
 {
-  return 0;
+  return id % SIZE;
 }
 
 bool HashTable::insertEntry(int id, string *data)
