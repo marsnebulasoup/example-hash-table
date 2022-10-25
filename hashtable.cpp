@@ -41,7 +41,12 @@ bool HashTable::removeEntry(int id)
 
 bool HashTable::getData(int id, Data *to)
 {
-  return true;
+  bool wasFound = false;
+  if (id > 0)
+  {
+    table[hash(id)].getNode(id, to);
+  }
+  return wasFound;
 }
 
 int HashTable::getCount()
