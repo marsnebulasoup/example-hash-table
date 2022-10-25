@@ -31,7 +31,12 @@ bool HashTable::insertEntry(int id, string *data)
 
 bool HashTable::removeEntry(int id)
 {
-  return true;
+  bool wasRemoved = false;
+  if (id > 0)
+  {
+    wasRemoved = table[hash(id)].deleteNode(id);
+  }
+  return wasRemoved;
 }
 
 bool HashTable::getData(int id, Data *to)
