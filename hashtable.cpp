@@ -11,10 +11,6 @@ HashTable::HashTable()
   count = 0;
 }
 
-HashTable::~HashTable()
-{
-}
-
 int HashTable::hash(int id)
 {
   return id % SIZE;

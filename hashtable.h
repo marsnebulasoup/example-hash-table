@@ -31,7 +31,6 @@ private:
 
 public:
   HashTable();
-  ~HashTable();
 
   bool insertEntry(int, string *);
   bool removeEntry(int);
