@@ -9,10 +9,13 @@ A example implementation of a linked list.
 
 #include "data.h"
 #include <iostream>
+#include <iomanip>
 #include <string>
 
 using std::cout;
 using std::endl;
+using std::setw;
+using std::left;
 using std::string;
 
 class LinkedList

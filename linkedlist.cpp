@@ -142,7 +142,7 @@ void LinkedList::printListForwards(Node *current)
 {
   if (current)
   {
-    cout << current->data.id << (current->next ? " --> " : "\n");
+    cout << setw(2) << left << current->data.id << (current->next ? " --> " : "\n");
     printListForwards(current->next);
   }
 }
@@ -152,7 +152,7 @@ void LinkedList::printListReverse(Node *current)
   if (current)
   {
     printListReverse(current->next);
-    cout << current->data.id << (current->prev ? " <-- " : "\n");
+    cout << setw(2) << left << current->data.id << (current->prev ? " <-- " : "\n");
   }
 }
 
