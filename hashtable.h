@@ -10,8 +10,15 @@ A example implementation of a hash table.
 #include "data.h"
 #include "linkedlist.h"
 #include "string"
+#include <iostream>
+#include <iomanip>
 
+using std::cout;
+using std::endl;
+using std::setw;
+using std::left;
 using std::string;
+
 
 #define SIZE 15
 

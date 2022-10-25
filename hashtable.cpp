@@ -40,5 +40,12 @@ int HashTable::getCount()
 }
 
 void HashTable::printTable()
-{
+{  
+  cout << left << "# -|-- Entry -----------------------------" << endl;
+  for (int i = 0; i < SIZE; i++)
+  {
+    cout << setw(2) << i + 1 << " | ";
+    table[i].printList();
+  }
+  cout << "------------------------------------------" << endl;
 }
