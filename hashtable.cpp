@@ -21,7 +21,12 @@ int HashTable::hash(int id)
 
 bool HashTable::insertEntry(int id, string *data)
 {
-  return true;
+  bool wasInserted = false;
+  if (id > 0 && data && data->length() > 0)
+  {
+    wasInserted = table[hash(id)].addNode(id, data);
+  }
+  return wasInserted;
 }
 
 bool HashTable::removeEntry(int id)
@@ -40,7 +45,7 @@ int HashTable::getCount()
 }
 
 void HashTable::printTable()
-{  
+{
   cout << left << "# -|-- Entry -----------------------------" << endl;
   for (int i = 0; i < SIZE; i++)
   {
