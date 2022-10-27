@@ -43,7 +43,12 @@ bool HashTable::getData(int id, Data *to)
   bool wasFound = false;
   if (id > 0)
   {
-    table[hash(id)].getNode(id, to);
+    wasFound = table[hash(id)].getNode(id, to);
+  }
+  else
+  {   
+    to->id = -1;
+    to->data = "";
   }
   return wasFound;
 }
