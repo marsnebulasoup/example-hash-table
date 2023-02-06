@@ -1,9 +1,3 @@
-/*********************
-Name: Kevin Bryniak
-Assignment: Hash Tables
-A example implementation of a hash table.
-**********************/
-
 #ifndef MAIN_H
 #define MAIN_H
 

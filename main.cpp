@@ -1,9 +1,3 @@
-/*********************
-Name: Kevin Bryniak
-Assignment: Hash Tables
-A example implementation of a hash table.
-**********************/
-
 #include "main.h"
 
 int main()
@@ -11,12 +5,6 @@ int main()
   // seed the rand function
   srand(time(NULL));
 
-  /*
-   * This code makes test data of 6 - 25 entries
-   * Note this guarantees at least one non unique id and one bad id
-   * Do not modify this code from here to the next comment telling
-   * you to "START HERE"
-   */
   const int testdatasize = BASE + (rand() % OFFSET + 1);
   int ids[testdatasize];
   string strs[testdatasize];
@@ -47,13 +35,6 @@ int main()
   }
   cout << endl;
 
-  /*
-   * Now you have two parallel arrays with ids and strings for test data.
-   * START HERE and create your hash table and use the test data to show
-   * it works.
-   */
-
-  // create your hash table object here
   HashTable table;
 
   // STATIC TESTS
